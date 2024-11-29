@@ -29,3 +29,5 @@ README-design-the-problem.md
 README-design-the-problem-cont.md
 README-sim-code.md
 README-sim-code-output.md
+README-sim-visualize.md
+README-process-now-defined.md
