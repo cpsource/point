@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Check if an argument is provided
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 <arg1>"
+    exit 1
+fi
+
+# Assign the argument to a variable
+arg1=$1
+
+# Open a README file in vim
+vim README-"$arg1".md
+
+# Append the formatted filename to filelist.txt
+echo "README-$arg1.md" >> filelist.txt
+
+# Notify the user of the operation
+echo "Appended 'README-$arg1.md' to filelist.txt"
+
