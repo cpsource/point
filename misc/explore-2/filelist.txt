@@ -38,3 +38,7 @@ README-black-holes-points-oscillate.md
 README-black-hole-theories.md
 README-ringdown.md
 README-black-hole-temperature.md
+README-conservation-of-gravity.md
+README-points-and-energy.md
+README-points-radiation-direction.md
+README-points-simulation.md
