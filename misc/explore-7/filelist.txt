@@ -1,0 +1,16 @@
+README-gyroscope.md
+README-gyroscope-gravity-effects.md
+README-angular-momentum.md
+README-precession.md
+README-precession-at-c.md
+README-r-to-zero.md
+README-no-m.md
+README-no-m-log.md
+README-no-m-log-combine.md
+README-no-m-log-combine-and-reduced.md
+README-no-m-log-combine-vary-g.md
+README-no-m-log-combine-vary-e.md
+README-no-m-log-combine-vary-e-examined.md
+README-no-m-log-combine-vary-and-compensate.md
+README-r-gague.md
+README-gague-math.md
