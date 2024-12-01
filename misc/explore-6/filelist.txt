@@ -1,0 +1,15 @@
+README-brennan-torpedo.md
+README-brennan-uft-point.md
+README-brennan-uft-point-cont.md
+README-superluminal.md
+README-possible-interactions.md
+README-wave-collapses.md
+README-transmit-phase-velosity.md
+README-how-phase-velosity-interacts.md
+README-is-phase-velosity-real.md
+README-more-info-needed-on-wave.md
+README-proper-wave-definition.md
+README-proper-wave-definition-part2.md
+README-simulation-variables-defined.md
+README-entrainment-etc.md
+README-entrainment-and-phase.md
