@@ -13,3 +13,5 @@ README-proper-wave-definition-part2.md
 README-simulation-variables-defined.md
 README-entrainment-etc.md
 README-entrainment-and-phase.md
+README-minimize-energy-dissipation.md
+README-solutons-and-point-theory.md
