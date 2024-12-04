@@ -16,3 +16,5 @@ README-entrainment-etc.md
 README-entrainment-and-phase.md
 README-minimize-energy-dissipation.md
 README-solutons-and-point-theory.md
+README-cymatics.md
+README-vector-calculus.md
