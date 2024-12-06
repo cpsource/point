@@ -5,3 +5,14 @@ README-tunneling.md
 README-van-der-waals-forces.md
 README-casimir-forces.md
 README-uft-barrier.md
+README-uft-expanding-universe-gravity.md
+README-uft-expanding-universe-gravity-1.md
+README-gravity-relay.md
+README-gravity-relay-sum.md
+README-gravity-and-higgs.md
+README-gravity-evolved.md
+README-universe-size.md
+README-universe-size-1-light-year.md
+README-regional-gravity.md
+README-higgs-and-expansion.md
+README-higgs-thingies.md
