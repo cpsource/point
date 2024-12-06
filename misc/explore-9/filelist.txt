@@ -6,3 +6,14 @@ README-blue-and-red.md
 README-blue-and-red-energies.md
 README-blue-and-red-energies-known-values.md
 README-v-eq-c.md
+README-vgtc-complex.md
+README-vgtc-integrate.md
+README-phase-shift.md
+README-oversample.md
+README-oversample-frequency.md
+README-fourier-transform.md
+README-fourier-transform-example.md
+README-fourier-transform-example-1.md
+README-fourier-transform-example-30.md
+README-nonlinear-mixing.md
+README-phase.md
