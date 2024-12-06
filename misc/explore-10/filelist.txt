@@ -19,3 +19,15 @@ README-higgs-thingies.md
 README-space-lumpyness.md
 README-spin-particles.md
 README-points-form-matter.md
+README-oscillating-gravity.md
+README-standing-waves-electron-shells.md
+README-standing-waves-bonds.md
+README-probabilistic-framework.md
+README-slow-sampling-rate.md
+README-single-theory.md
+README-hierarchical-framework.md
+README-approach.md
+README-approach-math.md
+README-vector-math.md
+README-vector-math-sim.md
+README-vector-math-sim-no-mysteries.md
