@@ -17,3 +17,7 @@ README-fourier-transform-example-1.md
 README-fourier-transform-example-30.md
 README-nonlinear-mixing.md
 README-phase.md
+README-purity-of-laser-light.md
+README-broadening.md
+README-warming-mass-and-gravity.md
+README-bundles.md
