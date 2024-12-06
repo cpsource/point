@@ -31,3 +31,6 @@ README-approach-math.md
 README-vector-math.md
 README-vector-math-sim.md
 README-vector-math-sim-no-mysteries.md
+README-massive-gravity-theory.md
+README-massive-gravity-theory-cont.md
+README-massive-gravity-compton.md
