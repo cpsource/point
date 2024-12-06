@@ -16,3 +16,6 @@ README-universe-size-1-light-year.md
 README-regional-gravity.md
 README-higgs-and-expansion.md
 README-higgs-thingies.md
+README-space-lumpyness.md
+README-spin-particles.md
+README-points-form-matter.md
