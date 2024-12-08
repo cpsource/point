@@ -34,3 +34,13 @@ README-vector-math-sim-no-mysteries.md
 README-massive-gravity-theory.md
 README-massive-gravity-theory-cont.md
 README-massive-gravity-compton.md
+README-qantum-correction.md
+README-multi-gravity.md
+README-bimetric-gravity.md
+README-quadra-pole.md
+README-kronecker-delta.md
+README-ricci-scalar.md
+README-graviton-and-quantum-mechanics.md
+README-graviton-and-spin.md
+README-graviton-spins-720.md
+README-spin-as-fundamental-property.md
