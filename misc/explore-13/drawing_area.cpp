@@ -21,14 +21,14 @@ int main(int argc, char *argv[]) {
     // Create the main window
     GtkWidget *window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
     gtk_window_set_title(GTK_WINDOW(window), "GTK+ Drawing Area Example");
-    gtk_window_set_default_size(GTK_WINDOW(window), 400, 300);
+    gtk_window_set_default_size(GTK_WINDOW(window), 500, 400);
 
     // Connect the "destroy" signal to quit the application
     g_signal_connect(window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
 
     // Create a drawing area
     GtkWidget *drawing_area = gtk_drawing_area_new();
-    gtk_widget_set_size_request(drawing_area, 400, 300);
+    gtk_widget_set_size_request(drawing_area, 500, 400);
 
     // Connect the "draw" signal to the callback
     g_signal_connect(drawing_area, "draw", G_CALLBACK(on_draw), NULL);
