@@ -1,19 +1,18 @@
 # Compiler
-CC = gcc
+CC = g++
 
 # Compiler and linker flags from pkg-config
-PKG_CONFIG = pkg-config
-CFLAGS = $(shell $(PKG_CONFIG) --cflags gtk+-3.0)
-LDFLAGS = $(shell $(PKG_CONFIG) --libs gtk+-3.0)
+CFLAGS = `pkg-config --cflags gtk+-3.0`
+LDFLAGS = `pkg-config --libs gtk+-3.0`
 
 # Target executable
-TARGET = my_program
+TARGET = drawing_area
 
 # Source files
-SRC = main.c  # Replace with your actual source files
+SRC = drawing_area.cpp  # Replace with your actual source files
 
 # Object files (derived from source files)
-OBJ = $(SRC:.c=.o)
+OBJ = $(SRC:.cpp=.o)
 
 # Default target
 all: $(TARGET)
@@ -23,7 +22,7 @@ $(TARGET): $(OBJ)
 	$(CC) $(OBJ) -o $(TARGET) $(LDFLAGS)
 
 # Rule to build object files
-%.o: %.c
+%.o: %.cpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # Clean rule to remove generated files
