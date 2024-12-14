@@ -1,1 +1,4 @@
 README-simulation-engines.md
+README-eigen.md
+README-mikes-tool-box.md
+README-lapack.md
