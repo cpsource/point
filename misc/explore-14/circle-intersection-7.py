@@ -1,22 +1,46 @@
 import math
 
+# xc, yc center of circle
+# x1, y1 first point on circle
+# x2, y2 second point on circle
+def arc_length(x1, y1, x2, y2, xc, yc, r):
+    # Vectors from the center to the points
+    v1 = (x1 - xc, y1 - yc)
+    v2 = (x2 - xc, y2 - yc)
+    
+    # Dot product and magnitudes
+    dot_product = v1[0] * v2[0] + v1[1] * v2[1]
+    magnitude = r  # For points on the circle, magnitude equals radius
+    
+    # Central angle (in radians)
+    theta = math.acos(dot_product / (magnitude * magnitude))
+    
+    # Determine the direction of the angle
+    cross_product = (v1[0] * v2[1]) - (v1[1] * v2[0])
+    if cross_product < 0:  # Clockwise direction
+        theta = 2 * math.pi - theta
+    
+    # Arc length
+    arc_length = r * theta
+    return arc_length
+
 def circle_relationship(x1, y1, r1, x2, y2, r2):
     """Determine the relationship between two circles: none, inside, tangent, or intersecting."""
     if x1 == x2 and y1 == y2 and r1 == r2:
-        return "Identical Circles"
+        return 0, 0, "Identical Circles"
 
     d = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
 
     if d > r1 + r2:
-        return "No Intersection"
+        return d, 1/d**2, "No Intersection"
     elif d == r1 + r2:
-        return "Touching Externally"
+        return d, 1/d**2, "Touching Externally"
     elif abs(r1 - r2) < d < r1 + r2:
-        return "Intersecting"
+        return d, 1/d**2, "Intersecting"
     elif d == abs(r1 - r2):
-        return "Touching Internally"
+        return d, 1/d**2, "Touching Internally"
     else:  # d < abs(r1 - r2)
-        return "One Inside the Other"
+        return d, 1/d**2, "One Inside the Other"
 
 def intersection_properties(x1, y1, r1, x2, y2, r2):
     """Determine the number of intersection points, tangent vectors, and the angle between them."""
@@ -40,6 +64,22 @@ def intersection_properties(x1, y1, r1, x2, y2, r2):
         intersection1 = (px + h * (y2 - y1) / d, py - h * (x2 - x1) / d)
         intersection2 = (px - h * (y2 - y1) / d, py + h * (x2 - x1) / d)
 
+        print(f"intersection1: {intersection1[0]}, {intersection1[1]}")
+        print(f"intersection2: {intersection2[0]}, {intersection2[1]}")
+
+        arc = arc_length(intersection1[0], intersection1[1],
+                         intersection2[0], intersection2[1],
+                         x1, y1, r1)
+        total_arc = arc
+        print(f"arc1 = {arc}")
+        arc = arc_length(intersection2[0], intersection2[1],
+                         intersection1[0], intersection1[1],
+                         x2, y2, r2)
+        print(f"arc2 = {arc}")
+
+        total_arc += arc
+        print(f"tot arc = {total_arc}")
+        
         # Tangent vectors at each intersection point
         tangent1_1 = (-intersection1[1] + y1, intersection1[0] - x1)  # Circle 1
         tangent1_2 = (-intersection2[1] + y1, intersection2[0] - x1)  # Circle 1
@@ -101,26 +141,36 @@ def common_area_and_circumference(x1, y1, r1, x2, y2, r2):
     return common_area, common_circumference
 
 def main():
-    x1, y1, r1 = map(float, input("Enter x1, y1, r1 for Circle 1: ").split())
-    x2, y2, r2 = map(float, input("Enter x2, y2, r2 for Circle 2: ").split())
+    x1, y1, r1  = map(float, input("Enter x1, y1, r1 for Circle 1: ").split())
+    x2, y2, r2  = map(float, input("Enter x2, y2, r2 for Circle 2: ").split())
+    dx, dy, cnt = map(float, input("Enter dx, dy, cnt: ").split())
+    cnt = int(cnt)
+    
+    # loop
+    for i in range(cnt):
+        print("")
+        
+        # Determine overall case of interaction
+        relationship = circle_relationship(x1, y1, r1, x2, y2, r2)
+        print(f"Relationship: {relationship[0]:.4f} {relationship[1]:.4f} {relationship[2]}")
 
-    # Determine overall case of interaction
-    relationship = circle_relationship(x1, y1, r1, x2, y2, r2)
-    print(f"Relationship: {relationship}")
+        # Determine intersection points and tangent vectors
+        num_points, tangent_vectors, angle = intersection_properties(x1, y1, r1, x2, y2, r2)
+        print(f"Number of Intersection Points: {num_points}")
+        if tangent_vectors:
+            print(f"Tangent Vectors: {tangent_vectors}")
+            if angle:
+                print(f"Angle Between Tangents: {angle:.2f} degrees")
 
-    # Determine intersection points and tangent vectors
-    num_points, tangent_vectors, angle = intersection_properties(x1, y1, r1, x2, y2, r2)
-    print(f"Number of Intersection Points: {num_points}")
-    if tangent_vectors:
-        print(f"Tangent Vectors: {tangent_vectors}")
-    if angle:
-        print(f"Angle Between Tangents: {angle:.2f} degrees")
+        # Calculate common area and circumference
+        area, circumference = common_area_and_circumference(x1, y1, r1, x2, y2, r2)
+        print(f"Common Area: {area:.2f}")
+        print(f"Common Circumference: {circumference:.2f}")
 
-    # Calculate common area and circumference
-    area, circumference = common_area_and_circumference(x1, y1, r1, x2, y2, r2)
-    print(f"Common Area: {area:.2f}")
-    print(f"Common Circumference: {circumference:.2f}")
-
+        # step
+        x2 += dx
+        y2 += dy
+        
 if __name__ == "__main__":
     main()
 
