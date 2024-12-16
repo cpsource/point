@@ -1,3 +1,4 @@
+README-top.md
 README-subspace-word-meaning.md
 README-subspace-properties.md
 README-subspace-math.md
@@ -16,3 +17,6 @@ README-subspace-tuning-the-model-and-c.md
 README-subspace-account-for-increased-mass.md
 README-subspace-compare-two-nns.md
 README-subspace-mass-vector-array.md
+README-subspace-wave-particle-duality.md
+README-subspace-wave-particle-collapse.md
+
