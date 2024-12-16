@@ -1,3 +1,5 @@
+# Note - this has been merged to UFT
+
 README-UFT-nn-introduction.md
 README-subspace-word-meaning.md
 README-subspace-properties.md
