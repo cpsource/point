@@ -8,13 +8,27 @@ fi
 
 # Assign the argument to a variable
 arg1=$1
+filename="README-$arg1.md"
+file_path_current="./$filename"
+file_path_target="~/UFT/mdgithub/$filename"
+
+# Check if the file exists in the current directory or target directory
+if [ -e "$file_path_current" ]; then
+    echo "Warning: File '$file_path_current' already exists in the current directory. Exiting."
+    exit 1
+fi
+
+if [ -e "$file_path_target" ]; then
+    echo "Warning: File '$file_path_target' already exists in ~/UFT/mdgithub/. Exiting."
+    exit 1
+fi
 
 # Open a README file in vim
-vim README-"$arg1".md
+vim "$filename"
 
 # Append the formatted filename to filelist.txt
-echo "README-$arg1.md" >> filelist.txt
+echo "$filename" >> filelist.txt
 
 # Notify the user of the operation
-echo "Appended 'README-$arg1.md' to filelist.txt"
+echo "Appended '$filename' to filelist.txt"
 
