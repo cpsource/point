@@ -38,3 +38,20 @@ README-line-integral-wolfram.md
 README-line-integral-symbolic.md
 README-sigmo-lorentz-function-gravity.md
 README-gravitational-field.md
+
+# Dec 18th Part II
+README-gravitational-spin.md
+README-gravitational-spin-explain-unk.md
+README-gravitational-spin-explain.md
+
+README-explain-nabla.md
+README-why-matter-interacts-with-subspace.md
+README-effect-spin.md
+README-heavy-vs-light-elements.md
+README-most-probable-scale.md
+README-pb-and-na.md
+README-plot-binding-energy.md
+README-nuclear-binding-energy-src.md
+README-nuclear-binding-energy-src-no-mass.md
+README-self-defined-mass.md
+README-what-is-stable.md
