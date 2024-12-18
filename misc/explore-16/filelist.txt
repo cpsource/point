@@ -36,3 +36,5 @@ README-line-integral-python.md
 README-line-integral-results.md
 README-line-integral-wolfram.md
 README-line-integral-symbolic.md
+README-sigmo-lorentz-function-gravity.md
+README-gravitational-field.md
