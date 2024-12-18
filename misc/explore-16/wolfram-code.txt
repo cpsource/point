@@ -1,0 +1,21 @@
+(* Define the hybrid transfer function T(v, x) *)
+HybridTransferFunction[v_, x_, alpha_, gamma_] := 
+  (1 / (1 + Exp[-alpha v])) * (1 / (1 + (x^2 / gamma^2)))
+
+(* Define the integrand for the line integral *)
+Integrand[t_, k_, alpha_, gamma_] := 
+  Module[{v = t, x = k t, ds},
+    ds = Sqrt[1 + k^2]; (* Arc length element for a straight line *)
+    HybridTransferFunction[v, x, alpha, gamma] * ds
+  ]
+
+(* Perform the numerical integration *)
+LineIntegralResult = 
+  NIntegrate[
+    Integrand[t, 1, 1, 1], {t, 0, 2}, 
+    Method -> "GlobalAdaptive"
+  ]
+
+(* Display the result *)
+Print["The result of the line integral is: ", LineIntegralResult]
+
