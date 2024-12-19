@@ -84,3 +84,9 @@ README-quark-confinement.md
 README-quark-confinement-nn.md
 README-negative-energy.md
 README-energy-well.md
+
+# Dec19 - part 2
+README-two-energy-wells-attract.md
+README-gravity-a-weak-force.md
+README-combined-masses.md
+README-effective-masses.md
